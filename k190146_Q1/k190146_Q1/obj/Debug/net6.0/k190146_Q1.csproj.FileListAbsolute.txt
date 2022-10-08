@@ -1,0 +1,15 @@
+E:\dotnet work\k190146_Q1\k190146_Q1\bin\Debug\net6.0\k190146_Q1.exe
+E:\dotnet work\k190146_Q1\k190146_Q1\bin\Debug\net6.0\k190146_Q1.deps.json
+E:\dotnet work\k190146_Q1\k190146_Q1\bin\Debug\net6.0\k190146_Q1.runtimeconfig.json
+E:\dotnet work\k190146_Q1\k190146_Q1\bin\Debug\net6.0\k190146_Q1.dll
+E:\dotnet work\k190146_Q1\k190146_Q1\bin\Debug\net6.0\k190146_Q1.pdb
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.csproj.AssemblyReference.cache
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.GeneratedMSBuildEditorConfig.editorconfig
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.AssemblyInfoInputs.cache
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.AssemblyInfo.cs
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.csproj.CoreCompileInputs.cache
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.dll
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\refint\k190146_Q1.dll
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.pdb
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\k190146_Q1.genruntimeconfig.cache
+E:\dotnet work\k190146_Q1\k190146_Q1\obj\Debug\net6.0\ref\k190146_Q1.dll

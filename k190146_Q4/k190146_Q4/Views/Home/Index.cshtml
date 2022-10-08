@@ -1,0 +1,104 @@
+﻿@{
+    List<string> lst = (List<string>)ViewData["categories"];
+
+    List<SelectListItem> items = new List<SelectListItem>();
+    var selectedVal = "1";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p class="text-info">Change the folder path in the appsetting.json folder where xml files are stored</p>
+    <p class="text-info h6">It will pick the most update xml file from the directory </p>
+</div>
+    <br/>
+@{
+    int i = 0;
+    foreach (string item in lst)
+    {
+        items.Add(new SelectListItem() {
+                    Text = item,
+                    Value = i.ToString()
+    });
+    i += 1;
+
+    }
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-group">
+        <div class="col-md-10">
+
+            @Html.DropDownList("Categories", items , "Select category",new { @class = "form-control"  , @onChange = "SelectedValue(this)"}  )
+           
+        </div>
+    </div>
+
+}
+
+
+<script>
+    var selectedV = 0;
+    //To get selected value an text of dropdownlist
+    function SelectedValue(ddlObject) {
+        //Selected value of dropdownlist
+        var selectedValue = ddlObject.value;
+        //Selected text of dropdownlist
+        var selectedText = ddlObject.options[ddlObject.selectedIndex].innerHTML;
+        selectedValue = selectedText;
+        //alert popup with detail of seleceted value and text
+        selectedV = selectedValue;
+
+        fetch("/api/"+ selectedText).then(data=>{
+            return data.json()
+        }).then(data=>{
+            document.getElementById("display-table").innerHTML = `<tr>
+                <td>Company</td>
+                <td>Price</td>
+            </tr>`;
+            console.log(data);
+            let html = "";
+            for (let i = 0 ; i < data.length ; i++){
+                html += `<tr> <td> ${data[i].name} </td> <td>${data[i].price}  </td> <tr>`
+            }
+            document.getElementById("display-table").innerHTML += html;
+
+        }).catch(err=>{
+            console.log(err);
+        })
+        
+    }
+</script>
+
+
+<br />
+<br />
+
+<script>
+    function clear(){
+        console.log("test1");
+    }
+</script>
+
+<input type="button"
+       value="Clear"
+       class="btn btn-light"
+       onclick="location.href='/'" />
+
+
+
+
+
+<div id="displaybox">
+    <table id="display-table" class="table">
+        <tr>
+            <td>Company</td>
+            <td>Price</td>
+        </tr>
+
+
+    </table>
+</div>
+
